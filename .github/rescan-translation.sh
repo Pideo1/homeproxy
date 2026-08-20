@@ -2,7 +2,6 @@
 
 BASE_DIR="$(cd "$(dirname $0)"; pwd)"
 LUCI_DIR="$BASE_DIR/../../luci"
-
 if [ -d "$LUCI_DIR" ]; then
 	perl "$LUCI_DIR/build/i18n-scan.pl" . > "$BASE_DIR/../po/templates/homeproxy.pot"
 	perl "$LUCI_DIR/build/i18n-update.pl" "$BASE_DIR/../po"
